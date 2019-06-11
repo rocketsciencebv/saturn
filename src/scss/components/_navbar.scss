@@ -1,26 +1,25 @@
 @keyframes top-in {
   0% {
-    top: -20%;
+    transform: translateY(-50%);
   }
   100% {
-    top: 0%;
+    transform: translateY(0%);
   }
 }
 
+// animation-fill-mode: forwards;
+// animation-iteration-count: 1;
+// animation-duration: 0.3s;
+// animation-timing-function: linear;
+// animation-name: top-in;
+// animation-delay: 0.4s;
 .navbar {
-  // animation-fill-mode: forwards;
-  // animation-iteration-count: 1;
-  // animation-duration: 0.5s;
-  // animation-timing-function: linear;
-  // animation-name: top-in;
-  // animation-delay: 0.3s;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   width: 100%;
   z-index: 1050;
-  transform: translate3d(0, 0, 0);
   transition: background-color 0.5s ease-in-out;
 
   .navbar-brand {
