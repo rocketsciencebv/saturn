@@ -1,10 +1,10 @@
-# Archytas
+# Saturn
 
-Archytas is a starter for creating one page websites with Webpack as a bundler.
+Saturn is a starter for creating one page websites with Webpack as a bundler.
 
 ## Installation
 
-Use node package manager [npm](https://www.npmjs.com) to install all dependencies Archytas needs.
+Use node package manager [npm](https://www.npmjs.com) to install all dependencies Saturn needs.
 
 ```bash
 npm install

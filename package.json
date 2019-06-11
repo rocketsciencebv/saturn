@@ -1,8 +1,8 @@
 {
-  "title": "Archytas",
-  "name": "archytas",
+  "title": "Saturn",
+  "name": "saturn",
   "version": "1.0.0",
-  "description": "A foundation for creating one page websites with Webpack",
+  "description": "A simple skewed website template",
   "private": true,
   "scripts": {
     "start": "node server.js",
@@ -23,14 +23,14 @@
   ],
   "homepage": "https://www.rocketscience.io",
   "bugs": {
-    "url": "https://github.com/rocketsciencebv/archytas/issues",
+    "url": "https://github.com/rocketsciencebv/saturn/issues",
     "email": "info@rocketscience.io"
   },
   "license": "MIT",
   "author": "Marnix Harderwijk",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rocketsciencebv/archytas"
+    "url": "https://github.com/rocketsciencebv/saturn"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.8.1",
