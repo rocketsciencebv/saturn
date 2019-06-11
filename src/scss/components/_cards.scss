@@ -1,0 +1,12 @@
+.card {
+  &--primary {
+    border: 0;
+
+    .card__header {
+      text-align: center;
+      img {
+        max-width: toRem(100px);
+      }
+    }
+  }
+}

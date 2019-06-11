@@ -1,0 +1,32 @@
+// Gray colors
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+
+// Main colors
+$primary: #ff3366 !default;
+$secondary: #09baa6 !default;
+
+// Various colors
+$black: #101111 !default;
+$black-darker: #000000;
+$white: #fff !default;
+
+// Sizes
+$base-size: 16px;
+
+// Breakpoints
+$br-sm: 576px;
+$br-md: 768px;
+$br-lg: 992px;
+$br-xl: 1200px;
+
+// elements
+$footer-upper-bg: $primary;
+$footer-lower-bg: darken($primary, 5);

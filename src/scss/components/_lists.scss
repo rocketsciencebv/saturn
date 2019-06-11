@@ -1,0 +1,36 @@
+.list-group {
+  background-color: transparent;
+
+  &--horizontal {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    .list-group-item {
+      flex: 1 1 auto;
+    }
+  }
+}
+
+.list-group--nav {
+  .list-group-item {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    a {
+      color: $black;
+      display: block;
+      font-size: 0.85rem;
+      padding: 1.5rem 0 0 0;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    &:first-child a {
+      padding-top: 0;
+    }
+  }
+}

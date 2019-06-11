@@ -1,0 +1,59 @@
+@import './variables';
+@import './mixins/mixins';
+@import './fonts';
+@import './components/components';
+
+$br-sm: 576px;
+$br-md: 768px;
+$br-lg: 992px;
+$br-xl: 1200px;
+
+html,
+body {
+  font-size: $base-size;
+
+  @media (max-width: $br-sm) {
+    font-size: 12px;
+  }
+
+  @media (max-width: $br-md) {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: 'Montserrat';
+  letter-spacing: 0.0625em;
+  font-weight: normal;
+
+  // @media (max-width: $br-lg) {}
+  &.lock-scroll {
+    overflow: hidden;
+  }
+}
+
+main {
+  background-color: transparent;
+}
+
+a {
+  color: $primary;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: darken($primary, 20%);
+  }
+}
+
+.bg-black {
+  background-color: $black !important;
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.text-primary {
+  color: $primary !important;
+}
