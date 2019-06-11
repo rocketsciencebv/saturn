@@ -1,6 +1,8 @@
 # Saturn
 
-Saturn is a starter for creating one page websites with Webpack as a bundler.
+Derived from our [Archytas](https://github.com/rocketsciencebv/archytas) starter template, Saturn is a starter for creating one page websites with Webpack as a bundler.
+
+[View a demo](https://rs-saturn.herokuapp.com/)
 
 ## Installation
 
