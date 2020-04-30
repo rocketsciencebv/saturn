@@ -38,7 +38,7 @@
     "express": "^4.17.0",
     "express-redirect": "^1.2.2",
     "in-view": "^0.6.1",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "jquery.easing": "^1.4.1"
   },
   "devDependencies": {
