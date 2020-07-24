@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/js/main.js',
@@ -41,12 +42,13 @@ module.exports = {
             // single bundled file
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '../../',
+              publicPath: './assets',
             },
           },
           {
             // This loader resolves url() and @imports inside CSS
             loader: 'css-loader',
+            options: { url: false, sourceMap: true },
           },
           {
             // Then we apply postCSS fixes like autoprefixer and minifying
@@ -113,19 +115,31 @@ module.exports = {
         // and not duplicate it in rules with them
         enforce: 'pre',
       },
-      {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        exclude: /(node_modules|img)/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/fonts/',
-            },
-          },
-        ],
-      },
+      // {
+      //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      //   use: {
+      //     loader: 'url-loader',
+      //     options: {
+      //       name: '[name].[ext]',
+      //       outputPath: 'assets/fonts',
+      //       limit: 10000,
+      //     },
+      //   },
+      // },
+      // {
+      //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      //   exclude: /(node_modules|img)/,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {
+      //         name: '[name].[ext]',
+      //         outputPath: 'assets/fonts/',
+      //         publicPath: '../',
+      //       },
+      //     },
+      //   ],
+      // },
       {
         test: /\.html$/,
         use: [
@@ -140,6 +154,13 @@ module.exports = {
     ],
   },
   plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/fonts', to: 'assets/fonts' },
+        { from: 'src/img', to: 'assets/img' },
+      ],
+    }),
+
     new MiniCssExtractPlugin({
       filename: 'assets/styles/[name].css',
     }),
